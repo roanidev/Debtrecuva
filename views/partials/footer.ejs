@@ -1,0 +1,46 @@
+<!-- Wrapper End-->
+
+<script src="assets/js/backend-bundle.min.js"></script>
+
+<!-- Table Treeview JavaScript -->
+<script src="assets/js/table-treeview.js"></script>
+
+<!-- Chart Custom JavaScript -->
+<script src="assets/js/customizer.js"></script>
+
+<!-- Chart Custom JavaScript -->
+<script async="" src="assets/js/chart-custom.js"></script>
+
+<!-- app JavaScript -->
+<script src="assets/js/app.js"></script>
+
+<script>
+    //AUTO NOTIFICATION AVAILABLE TO ALL PAGES
+    const searchParams = new URLSearchParams(window.location.search);
+
+
+    if (searchParams.has("failure")) {
+        Notiflix.Report.failure("Notification", searchParams.get("failure"))
+    }
+    if (searchParams.has("success")) {
+        Notiflix.Report.success("Notification", searchParams.get("success"))
+
+    }
+
+    // var url = document.location.href;
+    // window.history.pushState({}, "", url.split("?")[0]);
+</script>
+
+<script src="https://cdn.tiny.cloud/1/qa5p2npxkfdpkdgrdhxkwsn8yj38oh2jzhgo6btaiugbj5hy/tinymce/6/tinymce.min.js"
+    referrerpolicy="origin"></script>
+
+<script>
+    tinymce.init({
+        selector: 'textarea',
+        plugins: 'link lists searchreplace wordcount',
+        toolbar: 'undo redo | blocks fontsize | bold italic underline strikethrough | indent outdent | link | align | numlist bullist',
+    });
+</script>
+</body>
+
+</html>

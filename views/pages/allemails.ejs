@@ -1,0 +1,70 @@
+<%- include('../partials/head') %>
+    <div class="wrapper">
+        <%- include('../partials/sidebar') %>
+
+            <%- include('../partials/navbar') %>
+                <div class="content-page">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="d-flex flex-wrap align-items-center justify-content-between mb-4">
+                                    <div>
+                                        <h4 class="mb-3">All Sent Emails</h4>
+                                        <!-- <p class="mb-0">Returns dashboard shows the graphical representation of the channel
+                                    and Reference <br>wise returns with the comparison to the total units sold..</p> -->
+                                    </div>
+                                    <!-- <a href="page-add-return.html" class="btn btn-primary add-list"><i
+                                    class="las la-plus mr-3"></i>Add Returns</a> -->
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="table-responsive rounded mb-3">
+                                    <table class="data-table table mb-0 tbl-server-info">
+                                        <thead class="bg-white text-uppercase">
+                                            <tr class="ligth ligth-data">
+                                                <th>S/N</th>
+                                                <th>Subject</th>
+                                                <th>From</th>
+                                                <th>Message</th>
+                                                <th>Agent</th>
+                                                <th>Date</th>
+
+                                            </tr>
+                                        </thead>
+                                        <tbody class="ligth-body">
+                                            <% emails.forEach((element,index)=> { %>
+                                                <tr>
+                                                    <td>
+                                                        <%= index+1 %>
+                                                    </td>
+                                                    <td>
+                                                        <%= element.doc.subject%>
+                                                    </td>
+                                                    <td>
+                                                        <%= element.doc.from%>
+                                                    </td>
+                                                    <td>
+                                                      <small>  <%-  element.doc.message%> </small> 
+                                                    </td>
+                                                    <td>
+                                                        <%= element.doc.agent %>
+                                                    </td>
+                                                    <td>
+                                                        <%= element.doc.createdAt %>
+                                                    </td>
+
+                                                </tr>
+                                                <% }) %>
+
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Page end  -->
+                    </div>
+
+                </div>
+    </div>
+    <%- include('../partials/footer') %>

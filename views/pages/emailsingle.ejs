@@ -1,0 +1,66 @@
+<%- include('../partials/head') %>
+    <div class="wrapper">
+        <%- include('../partials/sidebar') %>
+
+            <%- include('../partials/navbar') %>
+                <div class="content-page">
+                    <div class="container-fluid add-form-list">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="card">
+                                    <div class="card-header d-flex justify-content-between">
+                                        <div class="header-title">
+                                            <h4 class="card-title">EMAIL</h4>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <form method="post" >
+                                            <div class="row">
+                                                <!-- The receipient emails number  -->
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label>From Email:</label>
+                                                        <input type="email" name="from" class="form-control"
+                                                            placeholder="Enter Email Address" >
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label>Recipient:</label>
+                                                        <input type="email" name="to" class="form-control"
+                                                            placeholder="Enter Email Address" >
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label>Subject</label>
+                                                        <input type="text" name="subject" class="form-control"
+                                                            placeholder="Enter Subject" >
+                                                    </div>
+                                                </div>
+                                                <!-- The message to the receipient -->
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label>Email Content</label>
+                                                        <div>
+                                                            <textarea name="message" id="" cols="30" rows="4"
+                                                                class="form-control" ></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+
+                                            </div>
+                                            <button type="submit" class="btn btn-primary mr-2 px-5">Send</button>
+                                            <button type="button" class="btn btn-danger">Reset</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Page end  -->
+                    </div>
+                </div>
+    </div>
+    <%- include('../partials/footer') %>
